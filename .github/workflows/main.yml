@@ -35,9 +35,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Run ESLint
-        uses: ninosaurus/eslint-check@v5
+      - name: Run eslint with reviewdog
+        uses: reviewdog/action-eslint@v1.0.0
         with:
-          eslint-config-path: "./eslintrc.js"
-          custom-directory: "."
-          repo-token: ${{secrets.ESLINT_TOKEN}}
+          # GITHUB_TOKEN.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
