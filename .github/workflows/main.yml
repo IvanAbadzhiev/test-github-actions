@@ -40,4 +40,4 @@ jobs:
         with:
           eslint-config-path: "./eslintrc.js"
           custom-directory: "."
-          repo-token: ${{secrets.GITHUB_TOKEN}}
+          repo-token: ${{secrets.ESLINT_TOKEN}}
