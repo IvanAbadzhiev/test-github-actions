@@ -35,8 +35,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Run eslint with reviewdog
-        uses: reviewdog/action-eslint@v1.0.0
-        with:
-          # GITHUB_TOKEN.
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: eslint
+        uses: icrawl/action-eslint@v1
